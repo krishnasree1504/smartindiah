@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Education Advisor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="branding">
+                    <img src="logo.png" alt="Career Advisor Logo" class="logo">
+                    <h1>Career Advisor</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="career-search" placeholder="Search careers...">
+                    <button id="search-btn">Search</button>
+                </div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#quiz">Career Quiz</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <h3>Explore by Stage</h3>
+            <ul>
+                <li><a href="#stage-10th" data-stage="10th">After 10th Class</a></li>
+                <li><a href="#stage-12th" data-stage="12th">After 12th Class</a></li>
+                <li><a href="#stage-ug" data-stage="ug">Undergraduate Options</a></li>
+                <li><a href="#stage-pg" data-stage="pg">Postgraduate/Masters Options</a></li>
+            </ul>
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <label for="filter-stream">Stream:</label>
+                <select id="filter-stream">
+                    <option value="all">All</option>
+                    <option value="science">Science</option>
+                    <option value="commerce">Commerce</option>
+                    <option value="arts">Arts/Humanities</option>
+                    <option value="vocational">Vocational</option>
+                </select>
+            </div>
+            <!-- Add more filters as needed -->
+        </aside>
+        <div class="main-content">
+            <section id="home" class="hero">
+                <div class="container">
+                    <h2>Your Future Starts Here</h2>
+                    <p>Discover the perfect career path after your 10th grade based on your interests and strengths.</p>
+                    <a href="#quiz" class="btn">Take the Quiz Now!</a>
+                </div>
+            </section>
+
+            <section id="about" class="about-section">
+                <div class="container">
+                    <h2>About Us</h2>
+                    <div class="about-content">
+                        <div class="about-image">
+                            <img src="visualization.png" alt="Career Visualization" class="responsive-img">
+                        </div>
+                        <div class="about-text">
+                            <p>Welcome to Career Advisor, your personalized guide to navigating the exciting world of career choices after 10th grade. We understand that deciding your future path can be daunting, which is why we've created a platform designed to make this journey easier and more insightful for students and parents alike.</p>
+                            <p>Our mission is to empower young minds with the knowledge and resources needed to make informed decisions about their academic and professional future. Through our interactive career quiz, detailed career profiles, and educational pathway breakdowns, we aim to shed light on the diverse opportunities available in Science, Commerce, Arts, Diploma, and Vocational fields.</p>
+                            <p>We believe that every student has unique interests and strengths, and with the right guidance, they can find a career that is not only fulfilling but also aligned with their true potential. Let us help you unlock your future!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="quiz" class="quiz-section">
+                <div class="container">
+                    <h2>Find Your Path</h2>
+                    <div id="quiz-container">
+                        <!-- Quiz questions will be loaded here by JavaScript -->
+                        <p>Loading Quiz...</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="results" class="results-section">
+                <div class="container">
+                    <h2>Your Personalized Career Recommendations</h2>
+                    <div id="results-display">
+                        <!-- Personalized results will be displayed here -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <div class="container">
+                    <h2>Contact Us</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Career Advisor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

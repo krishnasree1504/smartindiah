@@ -1,0 +1,486 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+}
+
+header ul {
+    float: right;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Branding and Search */
+.branding {
+    float: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.branding .logo {
+    height: 40px; /* Adjust as needed */
+    width: auto;
+}
+
+.branding h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.search-bar {
+    float: right;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 200px;
+}
+
+.search-bar button {
+    background: #007bff; /* Blue search button */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: #0056b3;
+}
+
+/* Main Layout with Sidebar */
+main {
+    display: flex;
+    padding-top: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for sidebar */
+    border-right: 1px solid #e0e0e0;
+    min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+}
+
+.sidebar h3 {
+    color: #343a40;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.1rem;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #0056b3;
+    transform: translateX(5px);
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 400px;
+    background: #5cb85c; /* Friendly green */
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #28a745; /* Darker green */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* About Us Section */
+.about-section {
+    padding: 60px 0;
+    background-color: #e9f7ef; /* Light green background */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.about-section h2 {
+    color: #28a745; /* Darker green heading */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row; /* Default to row for larger screens */
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px; /* Ensure image has a minimum size */
+}
+
+.about-image .responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 2; /* Text content takes more space */
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack image and text vertically on small screens */
+    }
+
+    .about-image,
+    .about-text {
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+/* Sections */
+.quiz-section, .results-section, .contact-section {
+    padding: 40px 0;
+    background: #fff;
+    border-bottom: #ddd 1px solid;
+}
+
+.quiz-section h2, .results-section h2, .contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Contact Form */
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Quiz Section */
+#quiz-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.question-card h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #007bff; /* A friendly blue */
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.option-btn {
+    background: #e9ecef; /* Light gray */
+    border: 1px solid #ced4da;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.option-btn:hover {
+    background: #cfe2ff; /* Lighter blue on hover */
+    border-color: #007bff;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 15px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #28a745; /* Darker green */
+    border-radius: 10px;
+    transition: width 0.4s ease-in-out;
+}
+
+/* Results Section */
+#results-display {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: none; /* Hidden by default */
+}
+
+#results-display h3 {
+    color: #17a2b8; /* A friendly teal */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#results-display h4 {
+    color: #343a40;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.career-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.career-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.career-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.career-card h5 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.career-card p {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+#print-results {
+    display: block;
+    width: 200px;
+    margin: 30px auto 0 auto;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#print-results:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1, header ul {
+        float: none;
+        text-align: center;
+    }
+
+    header ul li {
+        padding: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .options {
+        flex-direction: column;
+    }
+
+    /* Adjustments for Main Layout on small screens */
+    main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        min-height: auto;
+    }
+
+    .main-content {
+        padding: 0 10px;
+    }
+
+    /* Hide elements that are not critical on mobile to save space */
+    .search-bar {
+        display: none;
+    }
+
+    header ul {
+        float: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header ul li {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
